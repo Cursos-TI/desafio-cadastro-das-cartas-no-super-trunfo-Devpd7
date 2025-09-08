@@ -15,6 +15,29 @@ int main() {
     float area2;                   // Area
     float pib2;                    // PIB
     int pontos_turisticos2;        // Pontos turisticos
+    
+    // Declaração das variáveis para o código da carta
+    char estado1, estado2;
+    int cidade1, cidade2;
+    char codigo_carta1[4];  // 3 caracteres + '\0'
+    char codigo_carta2[4];
+
+    // Leitura do código da carta 1
+    printf("Estado da Carta 1 (A-H): ");
+    scanf(" %c", &estado1);
+    printf("Cidade da Carta 1 (1-4): ");
+    scanf("%d", &cidade1);
+
+    // Leitura do código da carta 2
+    printf("Estado da Carta 2 (A-H): ");
+    scanf(" %c", &estado2);
+    printf("Cidade da Carta 2 (1-4): ");
+    scanf("%d", &cidade2);
+
+    // Formar o código da carta
+    sprintf(codigo_carta1, "%c%02d", estado1, cidade1);
+    sprintf(codigo_carta2, "%c%02d", estado2, cidade2);
+
 
     // Entrada dos dados da Carta 1
     printf("Cadastro da Carta 1:\n");              // Imprime mensagem para o usuario
